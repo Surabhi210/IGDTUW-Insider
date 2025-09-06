@@ -1,0 +1,168 @@
+:root {
+            /* Light Theme */
+            --bg-primary: #f8f5e9;
+            --bg-secondary: #f1e6cc87;
+            --card-bg: #fffdf8;
+
+            --text-primary: #4a2f2f;
+            --text-secondary: #6a4a4a;
+            --muted-text: #8b6c6c;
+
+            --accent-primary: #7a2e3a;
+            --accent-secondary: #9c3f4b;
+            --accent-subtle: #c9a27e;
+
+            --border-color: #d8cbb7;
+            --shadow: rgba(0, 0, 0, 0.08);
+
+            --navbar-bg: rgba(248, 245, 233, 0.9);
+            --footer-bg: #e9e1d0;
+            --footer-text: #4a2f2f;
+        }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--navbar-bg);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glass effect variant */
+.navbar.transparent {
+    background: rgba(131, 100, 62, 0.9) !important;
+    backdrop-filter: blur(50px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* Logo text */
+.logo h2 {
+    color: #4a2f2f;
+    font-weight: 700;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Better contrast on light brown */
+}
+
+/* Nav menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Links */
+.nav-link {
+    text-decoration: none;
+    color: #4a2f2f;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Better contrast */
+}
+
+/* Hover effect */
+.nav-link:hover {
+    color: #1b1710; /* Light cream color for better contrast */
+    background-color: rgba(255, 255, 255, 0.011);
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #FFE4B5; /* Matching accent color */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.logo-img:hover {
+    transform: rotate(360deg);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #8B7355;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        padding: 15px;
+        display: block;
+        width: 100%;
+    }
+}
