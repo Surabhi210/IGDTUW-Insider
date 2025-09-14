@@ -1,18 +1,17 @@
 :root {
-    --footer-bg: #e8d7c9;
-    --footer-text: #2c2c2c;
-    --footer-link: #4a2f2f;
-    --footer-link-hover: #2975a7;
-    --footer-border: rgba(0, 0, 0, 0.1);
+    --footer-bg: #4a0e1a;
+    --footer-text: white;
+    --footer-link-hover: #cccccc;
+    --footer-border: rgba(255, 255, 255, 0.2);
 }
 
 .footer {
-    background: var(--footer-bg);
+    background: #4A0E1A;
     padding: 50px 20px;
     border-top: 1px solid var(--footer-border);
     position: relative;
     overflow: hidden;
-    color: var(--footer-text);
+    color: white;
 }
 
 /* --- Grid layout --- */
@@ -38,7 +37,7 @@
 /* Subtle hover effect for symmetry */
 .footer-content > div:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* --- Headings --- */
@@ -46,24 +45,24 @@
 .footer h4 {
     margin-bottom: 1rem;
     font-weight: 700;
-    color: var(--footer-link);
+    color: white;
     transition: color 0.3s ease;
 }
 
 .footer h3:hover, 
 .footer h4:hover {
-    color: var(--footer-link-hover);
+    color: #cccccc;
 }
 
 /* --- Links --- */
 .footer a {
-    color: var(--footer-link);
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .footer a:hover {
-    color: var(--footer-link-hover);
+    color: #cccccc;
     transform: scale(1.05);
 }
 
@@ -83,7 +82,7 @@
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid var(--footer-border);
-    color: rgba(47, 1, 1, 0.8);
+    color: white;
     font-size: 0.9rem;
     animation: fadeInText 1s ease-out 0.5s both;
 }
