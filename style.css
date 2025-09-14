@@ -5,20 +5,20 @@
 }
 
 :root {
-    --bg-primary: #f8f5e9;
-    --bg-secondary: #e9e1d0;
-    --card-bg: #fffdf8;
-    --text-primary: #4a2f2f;
-    --text-secondary: #6a4a4a;
-    --muted-text: #8b6c6c;
-    --accent-primary: #7a2e3a;
-    --accent-secondary: #9c3f4b;
-    --accent-subtle: #c9a27e;
-    --border-color: #d8cbb7;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f8f8;
+    --card-bg: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --muted-text: #999999;
+    --accent-primary: #690609;
+    --accent-secondary: #4a0e1a;
+    --accent-subtle: #8b1519;
+    --border-color: #e0e0e0;
     --shadow: rgba(0, 0, 0, 0.08);
-    --navbar-bg: rgba(248, 245, 233, 0.9);
-    --footer-bg: #e9e1d0;
-    --footer-text: #4a2f2f;
+    --navbar-bg: #690609;
+    --footer-bg: #4a0e1a;
+    --footer-text: white;
 }
 
 body {
@@ -106,13 +106,13 @@ body {
 }
 
 .hero-buttons .btn.primary {
-    background: #6a0407;
-    color: #d6c8bd;
+    background: #690609;
+    color: #ffffff;
     border: none;
 }
 
 .hero-buttons .btn.primary:hover {
-    background: #9a0d1b;
+    background: #8b1519;
 }
 
 .hero-buttons .btn.secondary {
@@ -155,7 +155,7 @@ body {
 
     .hero-buttons .btn {
         width: auto;           /* fits content */
-        min-width: 140px;      /* ensures it’s not too small */
+        min-width: 140px;      /* ensures it's not too small */
         max-width: 250px;      /* prevents it from being too wide */
         text-align: center;
         margin: 0.5rem auto;   /* keeps it centered with spacing */
@@ -179,8 +179,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 70%, rgba(52, 152, 219, 0.03), transparent 50%),
-        radial-gradient(circle at 70% 30%, rgba(231, 76, 60, 0.03), transparent 50%);
+    background: radial-gradient(circle at 30% 70%, rgba(105, 6, 9, 0.03), transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(74, 14, 26, 0.03), transparent 50%);
     animation: backgroundPulse 12s ease-in-out infinite;
 }
 
@@ -262,7 +262,7 @@ body {
 
 .link-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(52, 152, 219, 0.2);
+    box-shadow: 0 15px 30px rgba(105, 6, 9, 0.2);
     border-color: var(--accent-primary);
 }
 
