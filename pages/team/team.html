@@ -166,57 +166,67 @@
 
         /* Avatar */
         .avatar-wrapper {
-            position: relative;
-            display: inline-block;
-            margin: 0 auto 1.2rem;
-        }
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 1.2rem;
+}
 
-        /* Avatar box */
-        .avatar-placeholder {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 0 auto 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            color: #fff;
-            font-size: 2rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: filter 0.3s ease;
-        }
+/* Avatar box */
+.avatar-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: filter 0.3s ease;
+    overflow: hidden;   /* ensures images don't spill outside the circle */
+}
 
-        /* LinkedIn button (bottom center) */
-        .linkedin-link {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%) scale(0.8);
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s ease;
-            z-index: 10;
-            width: auto;
-            height: auto;
-            border-radius: 0;
-            box-shadow: none;
-            background: none;
-            display: inline-block;
-        }
+/* Avatar image */
+.avatar-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    border-radius: 50%;  /* keeps the circular shape */
+    display: block;      /* avoids bottom spacing */
+}
 
-        /* Show LinkedIn button on hover */
-        .avatar-wrapper:hover .linkedin-link {
-            opacity: 1;
-            transform: translateX(-50%) scale(1);
-            pointer-events: auto;
-        }
+/* LinkedIn button (bottom center) */
+.linkedin-link {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 10;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    display: inline-block;
+}
 
-        /* Darken avatar on hover */
-        .avatar-wrapper:hover .avatar-placeholder {
-            filter: brightness(0.7);
-        }
+/* Show LinkedIn button on hover */
+.avatar-wrapper:hover .linkedin-link {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    pointer-events: auto;
+}
+
+/* Darken avatar on hover */
+.avatar-wrapper:hover .avatar-placeholder {
+    filter: brightness(0.7);
+}
 
         /* Founder role text */
         .founder-role {
@@ -737,7 +747,7 @@
                     <!-- avatar with LinkedIn overlay -->
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>MK</span>
+                            <img src="mimansha.png" alt="Mimansha Kumar">
                         </div>
 
                         <a class="linkedin-link" href="https://www.linkedin.com/in/mimansha-kumar/" target="_blank"
@@ -759,7 +769,7 @@
                     <p class="founder-role">Founder</p>
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>RB</span>
+                            <img src="riddhima.png" alt="Riddhima">
                         </div>
 
                         <a class="linkedin-link" href="http://www.linkedin.com/in/riddhima-batra-937242317" target="_blank"
@@ -787,7 +797,7 @@
                     <p class="member-role">Associate Editor</p>
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>MM</span>
+                            <img src="mishka.png" alt="Mishka">
                         </div>
 
                         <a class="linkedin-link" href="https://www.linkedin.com/in/mishka-malhotra/" target="_blank"
@@ -813,7 +823,7 @@
                     <p class="member-role">Assistant Editor</p>
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>AG</span>
+                            <img src="anoushkag.png" alt="Anoushka Gupta">
                         </div>
 
                         <a class="linkedin-link" href="http://www.linkedin.com/in/anoushka-gupta-331163319" target="_blank"
@@ -830,7 +840,7 @@
                     <p class="member-role">Assistant Editor</p>
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>HT</span>
+                            <img src="hiya.png" alt="Hiya">
                         </div>
 
                         <a class="linkedin-link" href="https://www.linkedin.com/in/hiya-trehan-2127a4317/" target="_blank"
@@ -847,7 +857,7 @@
                     <p class="member-role">Assistant Editor</p>
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>MG</span>
+                            <img src="muskan.png" alt="Muskan">
                         </div>
 
                         <a class="linkedin-link" href="https://www.linkedin.com/in/muskan-goel-apr10" target="_blank"
@@ -873,7 +883,7 @@
                     <p class="member-role">Assistant Illustrator</p>
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>AN</span>
+                            <img src="anoushka.jpg" alt="Anoushka">
                         </div>
 
                         <a class="linkedin-link" href="https://www.linkedin.com/in/anoushkanoush/" target="_blank"
@@ -901,7 +911,7 @@
                     <p class="member-role">Assistant Web Manager</p>
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>SS</span>
+                            <img src="surabhi.png" alt="Surabhi">
                         </div>
 
                         <a class="linkedin-link" href="https://www.linkedin.com/in/surabhisethi" target="_blank"
@@ -921,7 +931,7 @@
                 <div class="member-card">
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>SG</span>
+                            <img src="srishti.png" alt="srishti">
                         </div>
 
                         <a class="linkedin-link" href="https://www.linkedin.com/in/srishtigupta1837/" target="_blank"
@@ -938,7 +948,7 @@
                 <div class="member-card">
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>TS</span>
+                            <img src="tanishas.png" alt="tanisha">
                         </div>
 
                         <a class="linkedin-link" href="https://www.linkedin.com/in/tanisha20" target="_blank"
@@ -954,7 +964,7 @@
                 <div class="member-card">
                     <div class="avatar-wrapper">
                         <div class="avatar-placeholder">
-                            <span>TO</span>
+                            <img src="tanishao.png" alt="Tanisha">
                         </div>
 
                         <a class="linkedin-link" href="https://www.linkedin.com/in/tanisha-ojha-6bb1b0203/" target="_blank"
